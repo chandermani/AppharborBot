@@ -42,13 +42,6 @@ namespace AppharborBot.WebHost.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-                Request.InputStream.Position = 0;
-                StreamReader dataReader = new StreamReader(Request.InputStream);
-
-                string message = string.Format("{0} {1} {2}", Request.Url.ToString(), Environment.NewLine, dataReader.ReadToEnd());
-                Error e = new Error(new NotSupportedException(message));
-                Elmah.ErrorLog.GetDefault(System.Web.HttpContext.Current).Log(e);
                 return RedirectToAction("Index","Home");
             }
             catch
