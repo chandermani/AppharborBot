@@ -15,6 +15,7 @@ namespace AppharborBot.WebHost.Filters
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
+            if (filterContext.HttpContext.Request.RequestType == "GET") return;
             
             string url = filterContext.HttpContext.Request.Url.ToString();
             if (url.IndexOf("Notification",StringComparison.InvariantCultureIgnoreCase) == -1) return;
