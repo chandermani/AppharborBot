@@ -17,7 +17,7 @@ namespace AppharborBot.WebHost.Filters
         {
             
             string url = filterContext.HttpContext.Request.Url.ToString();
-            if (url.IndexOf("Notification") == -1) return;
+            if (url.IndexOf("Notification",StringComparison.InvariantCultureIgnoreCase) == -1) return;
             filterContext.HttpContext.Request.InputStream.Position = 0;
             StreamReader reader = new StreamReader(filterContext.HttpContext.Request.InputStream);
             string body = reader.ReadToEnd();
