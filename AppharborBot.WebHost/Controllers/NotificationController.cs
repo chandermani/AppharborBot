@@ -36,7 +36,7 @@ namespace AppharborBot.WebHost.Controllers
             documentStore.Initialize();
             using (IDocumentSession session = documentStore.OpenSession())
             {
-                var data=session.Query<TraceData>();
+                var data = session.Query<TraceData>().OrderByDescending(td => td.CreatedOn);
                 return View("NotificationTrace", data);
             }
         }
