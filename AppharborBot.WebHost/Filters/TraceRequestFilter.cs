@@ -7,6 +7,7 @@ using System.IO;
 using Raven.Client.Document;
 using System.Web.Configuration;
 using Raven.Client;
+using AppharborBot.WebHost.Models;
 
 namespace AppharborBot.WebHost.Filters
 {
@@ -38,10 +39,5 @@ namespace AppharborBot.WebHost.Filters
                 session.SaveChanges();
             }
         }
-    }
-
-    public class TraceData
-    {
-        public string Data { get; set; }
     }
 }
