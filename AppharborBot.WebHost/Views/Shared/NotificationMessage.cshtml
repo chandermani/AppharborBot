@@ -1,0 +1,13 @@
+﻿@model Notification
+
+@{
+    Layout = null;
+}
+Build Notification
+Status : @Model.build.status
+Application: @Model.application.name
+Commit Id: @Model.build.commit.id
+Commit Message: @Model.build.commit.message
+Build Id: @Model.build.BuildId
+
+

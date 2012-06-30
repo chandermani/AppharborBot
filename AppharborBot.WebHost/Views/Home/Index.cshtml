@@ -1,8 +1,24 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-
-<h2>@ViewBag.Message</h2>
-<p>
-    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-</p>
+﻿<p>Here you can generate Appharbor notification url. Enter details below ...</p>
+<h3>Your Email </h3><input type="text" name="email" value="" id="emaidId" />  <br />
+<script type="text/javascript">
+    $(function () {
+        $('.process').fadeOut();
+        $('.button-big').click(function () {
+            $('.process').fadeOut();
+            $('.notificationurl').text("http://appharbornotification.cloudapp.net:9999/notification?email=" + $('#emaidId').val());
+            $('.process').fadeIn();
+        });
+    });
+</script>
+    <a href="#" class="button-big">Generate!</a>
+    <h5 class="notificationurl" style="width:600px"></h5>
+    <div class="process">
+        <ul style="list-style-type:disc">
+            <li>Copy the above Url</li>
+            <li>Goto <a href="http://www.appharbor.com">Appharbor</a></li>
+            <li>Select the application you want to add Google Talk notifications.</li>
+            <li>Under <i>Service Hooks</i> add the generated url.</li>
+            <li>Add <i>appharbornotificationservice@gmail.com</i> to your Google Talk Contacts.</li>
+            <li><b>Thats it! Now receive notifications directly in your Google Talk :)</b></li>
+        </ul>
+    </div>

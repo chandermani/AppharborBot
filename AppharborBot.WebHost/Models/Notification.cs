@@ -4,6 +4,7 @@
 using System.ComponentModel.DataAnnotations;
 public class Notification
 {
+    private const string template = "Build Notification ";
     public Application application { get; set; }
     public Build build { get; set; }
 }
