@@ -66,16 +66,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppharborBot.Core\AppharborBot.Core.csproj">
-      <Project>{3F3A9B1C-CAF6-4768-AE97-84969BB24547}</Project>
-      <Name>AppharborBot.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Appharborbot.Worker\Appharborbot.Worker.csproj">
-      <Project>{7C0538EC-B199-4110-9FCA-97234F4791C8}</Project>
-      <Name>Appharborbot.Worker</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
