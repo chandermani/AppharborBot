@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Appharborbot.Worker;
 
 namespace AppharborBot.ConsoleHost
 {
@@ -10,11 +11,8 @@ namespace AppharborBot.ConsoleHost
         static void Main(string[] args)
         {
             var client = CreateClient();
-           
             Console.ReadLine();
         }
-
-
 
         private static agsXMPP.XmppClientConnection CreateClient()
         {

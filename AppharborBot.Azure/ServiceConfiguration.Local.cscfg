@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="AppharborBot.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*" schemaVersion="2012-05.1.7">
+  <Role name="Appharborbot.Worker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="chandermani" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEDR06WaPMNaYSBAyGgei/iUwDQYJKoZIhvcNAQEBBQAEggEAZHUA7saIfxJBZoSw0uprUa2alXAk4X+ce1dk+Adu4WqOnviEQ2mv1AAwx6SoMoqnMDGRh+7+T/zY+dbcfuoVRU7Wtljm9m3a/LiBF8RLfGiZkf3+0r/8WkV6Cv70gx/bJe+QF40oIj5PqRHCyy69SGiNf7DEmj9IWRzaXhh6S6hXrzLRxTWmPsrARvc5Pv0MOLjWJTUTRWjrre9jUvZseG8VcAV+QEKe75CQrrBq8lyvSdMdj5JM+Ojn/u6HDCZotLNJzGdKaTz0f4PXJtPz8x5L2SRoed5qAI5Keq46IAt2evZ10tUV4Z3vkaPSCtHg3chSxRWZaiePoddONXj5hTAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECDjr8DnEGiR/gBDwtZpadIpEiwxa03IAP/Qb" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2013-06-30T23:59:59.0000000+05:30" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="81E64CD6E82A6BEB77B42C1E888EE50788EBD508" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

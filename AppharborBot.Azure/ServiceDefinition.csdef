@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="AppharborBot.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2012-05.1.7">
+  <WorkerRole name="Appharborbot.Worker" vmsize="ExtraSmall">
+    <Imports>
+      <Import moduleName="Diagnostics" />
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+    <Endpoints>
+      <InputEndpoint name="NotificationReceive" protocol="http" port="9999" />
+    </Endpoints>
+    <Startup>
+      <Task commandLine="AzurePortDetector.exe" executionContext="elevated" taskType="simple">
+      </Task>
+    </Startup>
+    <Runtime executionContext="elevated">
+    </Runtime>
+  </WorkerRole>
+</ServiceDefinition>
